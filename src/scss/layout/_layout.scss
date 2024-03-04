@@ -1,0 +1,92 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.title{
+    text-align: center;
+    margin-top: 8.8rem;
+    @include m.escritorio{
+        margin-top: 8.5rem;
+    }
+    h2{
+        margin-top: 1rem;
+    }
+    p{
+        width: 31rem;
+        margin: 2.2rem auto 0 auto;       
+        font-weight: 450;
+        @include m.escritorio{
+            width: 51rem;
+        }
+    }
+}
+.features{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+    margin-top: 4.6rem;
+    @include m.escritorio{
+        margin-top: 6.3rem;
+        flex-direction: row;
+    }
+}
+.feature-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    @include m.escritorio{
+        row-gap: 3rem;
+    } 
+}
+.card{
+    position: relative;
+    width: 31rem;
+    height: 22rem;
+    padding: 2.7rem 3.3rem 3.3rem 3.3rem;
+    border-radius: .7rem;
+    -webkit-box-shadow: 4px 10px 18px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 4px 10px 18px 0px rgba(0,0,0,0.15);
+    box-shadow: 4px 10px 18px 0px rgba(0,0,0,0.15);
+    margin-top: 2.6rem;
+    @include m.escritorio{
+        width: 35rem;
+        height: 25rem;
+        margin-top: 0;
+    }
+    p{
+        margin-top: 1.2rem;
+        font-size: 1.3rem;
+    }
+    .icon{
+        position: absolute;
+        display: flex;
+        flex-direction: row-reverse ;
+        bottom: 3.3rem;
+        width: calc(100% - 6.6rem);
+    }
+}
+
+.green{
+    border-top: .7rem solid v.$verde;
+}
+.red{
+    border-top: .7rem solid v.$rojo;
+}
+.orange{
+    border-top: .7rem solid v.$naranja;
+}
+.light-blue{
+    border-top: .7rem solid v.$celeste;
+}
+
+footer{
+    @include m.escritorio{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+}

@@ -1,0 +1,51 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: v.$fuentePrincipal;
+    font-size: 1.6rem;
+    background-color: v.$blanco;
+}
+
+h1,h2,h3{
+    color: v.$titulos;
+    margin: 0;
+}
+p{
+    margin: 0;
+    color: v.$parrafos;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+}
+h1{
+    font-weight: 200;
+    font-size: 2.3rem;
+    @include m.escritorio{
+        font-size: 3.6rem;
+    }
+}
+h2{
+    font-size: 2.3rem;
+    @include m.escritorio{
+        font-size: 3.6rem;
+    }
+}
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    width: 100%;
+    @include m.escritorio{
+        width: 77%;
+        margin: 0 auto;
+    }
+}
